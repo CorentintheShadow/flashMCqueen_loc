@@ -56,7 +56,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start; /* pour controler l'alignement du button ajoutée */
-    color: rgb(4, 0, 255);
+    color: white;
+    font-weight: bold;
     height: 100vh;
 }
 
@@ -67,4 +68,14 @@ body{
 .contenu p {
     font-size: 20px;
     margin-top: 20px;
+}
+
+.contenu button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    border: none; /* pour enlever bordure dans button */
+    background-color: #f63e4e;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
 }
