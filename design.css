@@ -149,7 +149,7 @@ body{
     border-radius: 1px solid #f63e4e;
 }
 
-.produits .fiche_produit .contenu_2 .modification {
+.produits .fiche_produit .contenu_2 .modification:hover {
     cursor: pointer;
     background: black;
     color: white;
