@@ -120,3 +120,17 @@ body{
     padding: 5px 20px;
     opacity: 0.8;
 }
+
+.produits .fiche_produit .modele {
+    font-weight: 900;
+    font-size: 20px;
+    color: #424144;
+    padding: 0 20px;
+}
+
+.produits .fiche_produit .contenu_2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
