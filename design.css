@@ -18,3 +18,9 @@ body{
     z-index: 999;
     background-color: aqua;
 }
+
+.navbar .logo .h1 {
+    color: white;
+    cursor: pointer;
+    
+}
