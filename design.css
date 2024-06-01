@@ -134,3 +134,9 @@ body{
     align-items: center;
     padding: 20px;
 }
+
+.produits .fiche_produit .prix{
+    color: #f63e4e;
+    font-size: 20px;
+    font-weight: bold;
+}
