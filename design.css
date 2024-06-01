@@ -79,3 +79,8 @@ body{
     border-radius: 5px;
     cursor: pointer;
 }
+
+.imageposition {
+    position: absolute;
+    left: 800px;
+}
