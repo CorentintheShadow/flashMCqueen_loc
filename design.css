@@ -16,7 +16,7 @@ body{
     position: sticky;
     top: 0%;
     z-index: 999;
-    background-color: aqua;
+    background-color: rgb(34, 139, 26);
 }
 
 .navbar .logo .h1 {
@@ -27,4 +27,14 @@ body{
 .navbar .menu li {
     list-style: none;
     display: inline-block;
+}
+
+.navbar .menu li a{
+    display: block;
+    margin-left: 20px;
+    color: white;
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
 }
