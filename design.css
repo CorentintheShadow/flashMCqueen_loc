@@ -47,3 +47,15 @@ body{
     border-bottom: 4px solid #f63e4e;
 }
 
+.contenu {
+    background-image: url(image/voiture_acceuil.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* pour controler l'alignement du button ajoutée */
+    color: rgb(4, 0, 255);
+    height: 100vh;
+}
