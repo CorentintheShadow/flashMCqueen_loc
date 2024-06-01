@@ -148,3 +148,9 @@ body{
     padding: 10px 18px;
     border-radius: 1px solid #f63e4e;
 }
+
+.produits .fiche_produit .contenu_2 .modification {
+    cursor: pointer;
+    background: black;
+    color: white;
+}
