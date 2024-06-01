@@ -22,5 +22,9 @@ body{
 .navbar .logo .h1 {
     color: white;
     cursor: pointer;
-    
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
 }
