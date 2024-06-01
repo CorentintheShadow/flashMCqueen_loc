@@ -59,3 +59,12 @@ body{
     color: rgb(4, 0, 255);
     height: 100vh;
 }
+
+.contenu h1 {
+    font-size: 40px;
+}
+
+.contenu p {
+    font-size: 20px;
+    margin-top: 20px;
+}
