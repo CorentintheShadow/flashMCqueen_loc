@@ -38,3 +38,11 @@ body{
     font-size: 14px;
     font-weight: bold;
 }
+
+.navbar .menu li .active {
+    border-bottom: 4px solid #f63e4e;
+}
+
+.navbar .menu li .a:hover {
+    border-bottom: 4px solid #f63e4e;
+}
