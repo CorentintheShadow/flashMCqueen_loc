@@ -115,3 +115,8 @@ body{
     height: 200px;
     font-weight: 100%;
 }
+
+.produits .fiche_produit .marque {
+    padding: 5px 20px;
+    opacity: 0.8;
+}
