@@ -2,31 +2,31 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto condensed' , sans-serif;
-}
+} /* initialisation du padding et margin pour bien controler la page */
 
 body{
     height: 100%;
 }
-
+/* mettre la page à sa hauteur complete */
 .navbar{
     padding: 20px 5%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* mettre espace entre logo et les liens */
     align-items: center;
-    position: sticky;
+    position: sticky; /* si on déroule en bas la barre d'acceuil ne disparait pas */
     top: 0%;
-    z-index: 999;
+    z-index: 999; /* pour toujours empiler la barre de menu en avant */
     background-color: rgb(34, 139, 26);
 }
 
 .navbar .logo .h1 {
     color: white;
-    cursor: pointer;
+    cursor: pointer; /* changer le curseur des que on arrive vers un lien  */
 }
 
 .navbar .menu li {
     list-style: none;
-    display: inline-block;
+    display: inline-block; /* met les liens en ligne de bloc */
 }
 
 .navbar .menu li a{
@@ -39,10 +39,11 @@ body{
     font-weight: bold;
 }
 
-.navbar .menu li .active {
+.navbar .menu li .active { /* mettre une barre au dessus de l'acceuil */
     border-bottom: 4px solid #f63e4e;
 }
 
-.navbar .menu li .a:hover {
+.navbar .menu li .a:hover { /* dés qu'on a cliquez sur un lien une barre apparait au dessous */
     border-bottom: 4px solid #f63e4e;
 }
+
