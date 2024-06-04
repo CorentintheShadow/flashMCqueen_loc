@@ -58,11 +58,51 @@
                 </div>
             </div>
             <div class="fiche_produit">
-                <div class="img"><img src="image/Ford-mustang-GT.jpg" alt="Ford-mustang-GT">
+                <div class="img"><img src="image/Ford-mustang-GT.jpg" alt="Ford_mustang_GT">
                 <div class="marque">Ford</div>
                 <div class="modele">Mustang</div>
                 <div class="contenu_2">
                     <div class="prix">500 euros par mois</div>
+                    <button class="modification">modifier</button>
+                </div>
+                </div>
+            </div>
+            <div class="fiche_produit">
+                <div class="img"><img src="image/lambo-aventador.jpg" alt="lamborgini_aventador">
+                <div class="marque">Lamborgini</div>
+                <div class="modele">Aventador</div>
+                <div class="contenu_2">
+                    <div class="prix">1200 euros par mois</div>
+                    <button class="modification">modifier</button>
+                </div>
+                </div>
+            </div>
+            <div class="fiche_produit">
+                <div class="img"><img src="image/Audi-RS7.jpg" alt="Audi_RS7">
+                <div class="marque">Audi</div>
+                <div class="modele">RS7</div>
+                <div class="contenu_2">
+                    <div class="prix">700 euros par mois</div>
+                    <button class="modification">modifier</button>
+                </div>
+                </div>
+            </div>
+            <div class="fiche_produit">
+                <div class="img"><img src="image/RL_octane.jpg" alt="octane_rocket_league">
+                <div class="marque">Rocket League</div>
+                <div class="modele">Octane</div>
+                <div class="contenu_2">
+                    <div class="prix">1000 euros par mois</div>
+                    <button class="modification">modifier</button>
+                </div>
+                </div>
+            </div>
+            <div class="fiche_produit">
+                <div class="img"><img src="image/Fiat-500.jpg" alt="Fiat_500">
+                <div class="marque">Fiat</div>
+                <div class="modele">500</div>
+                <div class="contenu_2">
+                    <div class="prix">200 euros par mois</div>
                     <button class="modification">modifier</button>
                 </div>
                 </div>
