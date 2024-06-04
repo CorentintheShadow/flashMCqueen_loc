@@ -19,7 +19,7 @@
     </nav>
     <section class="contenu">
         <h1>Ajouter voiture</h1>
-        <p>Ajouter de nouveaux voiture afin d'avoir plus de clients!!merci!!!</p>
+        <p>Ajouter de nouvelles voitures afin d'avoir plus de clients!! Merci!!!</p>
         <button>AJOUTER</button>
         <img src="image/voiture_sportive.png" alt="honda_civic" class="imageposition">
     </section>
@@ -33,6 +33,36 @@
                 <div class="modele">Hatchback</div>
                 <div class="contenu_2">
                     <div class="prix">300 euros par mois</div>
+                    <button class="modification">modifier</button>
+                </div>
+                </div>
+            </div>
+            <div class="fiche_produit">
+                <div class="img"><img src="image/BMW-M4.jpg" alt="BMW_M4">
+                <div class="marque">BMW</div>
+                <div class="modele">M4</div>
+                <div class="contenu_2">
+                    <div class="prix">600 euros par mois</div>
+                    <button class="modification">modifier</button>
+                </div>
+                </div>
+            </div>
+            <div class="fiche_produit">
+                <div class="img"><img src="image/BMW_serie4.jpg" alt="BMW_serie_4">
+                <div class="marque">BMW</div>
+                <div class="modele">série 4</div>
+                <div class="contenu_2">
+                    <div class="prix">500 euros par mois</div>
+                    <button class="modification">modifier</button>
+                </div>
+                </div>
+            </div>
+            <div class="fiche_produit">
+                <div class="img"><img src="image/Ford-mustang-GT.jpg" alt="Ford-mustang-GT">
+                <div class="marque">Ford</div>
+                <div class="modele">Mustang</div>
+                <div class="contenu_2">
+                    <div class="prix">500 euros par mois</div>
                     <button class="modification">modifier</button>
                 </div>
                 </div>
