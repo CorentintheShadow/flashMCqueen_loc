@@ -154,3 +154,10 @@ body{
     background: black;
     color: white;
 }
+
+/* fichier ajouter client */
+
+.titre{
+    text-align: center;
+    margin-top: 50px;
+    }
