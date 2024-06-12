@@ -11,10 +11,10 @@
     <nav class="navbar">
         <div class="logo"><h1>FCmcqueen</h1></div>
         <ul class="menu">
-            <li><a href="#" class="active">Accueil</a></li>
+            <li><a href="/projet_php/flashMCqueen_loc/index.php" class="active">Accueil</a></li>
             <li><a href="#">Ajouter voiture</a></li>
             <li><a href="#" class="fa-solid fa-car"></a></li>
-            <li><a href="#" class="fa-solid fa-user-plus"></a></li>
+            <li><a href="/projet_php/flashMCqueen_loc//page_client.php" class="fa-solid fa-user-plus"></a></li>
         </ul>
     </nav>
     <section class="contenu">

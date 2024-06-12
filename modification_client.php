@@ -28,7 +28,7 @@
         $nom = $ligne["nom"]; // assigner leurs valeurs afin de les modifier 
         $prenom = $ligne["prenom"];
         $adresse = $ligne["adresse"];
-        $type_de_client = $ligne["id_Type_de_client"];
+        $type_de_client = $ligne["Type_de_client"];
     }
     else {
         // sinon on met à jour les données du client
@@ -36,7 +36,7 @@
         $nom = $_POST["nom"];
         $prenom = $_POST["prenom"];
         $adresse = $_POST["adresse"];
-        $type_de_client = $_POST["id_Type_de_client"];
+        $type_de_client = $_POST["Type_de_client"];
     }
     do{ 
         if ( empty($nom) || empty($prenom) || empty($adresse) || empty($type_de_client)) {
@@ -48,7 +48,7 @@
 
         $requete = "UPDATE client " .
         "SET nom = '$nom',prenom = '$prenom',adresse = '$adresse',Type_de_client = '$type_de_client' " .
-        "WHERE id = $id";
+        "WHERE id_client = $id";
 
         $resultat = $connexion->query($requete);
 
@@ -59,7 +59,7 @@
             die();
             }
         $succes = "Client mis à jour !!!";
-        header("");
+        header("location: /projet_php/flashMCqueen_loc/page_client.php");
         exit;
 
     }while(false);

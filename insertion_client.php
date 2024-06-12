@@ -1,7 +1,28 @@
 <?php
+
+$nom = "";
+$prenom = "";
+$adresse = "";
+$type_de_client = "";
+
+$Message_erreur = "";
+$succes = "";
+
+if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) { // verifier si la requete est de type post
+    $nom = $_POST["nom"];
+    $prenom = $_POST["prenom"]; // si oui; recupération des données de la methode post et insertion dans la base de données
+    $adresse = $_POST["adresse"];
+    $type_de_client = $_POST["Type_de_client"];
+
+    do{ if ( empty($nom) || empty($prenom) || empty($adresse) || empty($type_de_client)) {
+        $Message_erreur = "veuillez saisir tous les champs";
+        break;
+    }
+
+
 try {
     $connexion = new PDO('mysql:host=localhost;dbname=locauto_php', 'root','');
-    $requete = "INSERT  INTO client (nom, prenom, adresse, Type_de_client)" . 
+    $requete = "INSERT  INTO client (nom, prenom, adresse, id_type_de_client)" . 
     "VALUES ('$nom','$prenom','$adresse ','$type_de_client')";
     $resultat = $connexion->query($requete);
     }
@@ -9,24 +30,6 @@ try {
     echo "Erreur : " . $e->getMessage() . "<br/>";
     die();
     }
-            $nom = "";
-            $prenom = "";
-            $adresse = "";
-            $type_de_client = "";
-
-            $Message_erreur = "";
-            $succes = "";
-
-        if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) { // verifier si la requete est de type post
-            $nom = $_POST["nom"];
-            $prenom = $_POST["prenom"]; // si oui; recupération des données de la methode post et insertion dans la base de données
-            $adresse = $_POST["adresse"];
-            $type_de_client = $_POST["Type_de_client"];
-
-            do{ if ( empty($nom) || empty($prenom) || empty($adresse) || empty($type_de_client)) {
-                $Message_erreur = "veuillez saisir tous les champs";
-                break;
-            }
 
             //rénitialiser les champs aprés avoir ajouter le nouveau client 
 
@@ -37,7 +40,7 @@ try {
 
             $succes = "client ajouté avec succes";
 
-            // header("location: /"); //fonction qui redirige vers un chemin
+            header("location: /projet_php/flashMCqueen_loc/page_client.php"); //fonction qui redirige vers un chemin
             exit;
 
             }while (false);

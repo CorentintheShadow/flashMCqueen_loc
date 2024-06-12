@@ -13,10 +13,10 @@
     <nav class="navbar">
         <div class="logo" class="container-sm"><h1>FCmcqueen</h1></div>
         <ul class="menu">
-            <li><a href="#">Accueil</a></li>
+            <li><a href="/projet_php/flashMCqueen_loc/index.php">Accueil</a></li>
             <li><a href="#">Ajouter voiture</a></li>
             <li><a href="#" class="fa-solid fa-car"></a></li>
-            <li><a href="#" class="fa-solid fa-user-plus" style="color: #ff0000;"></a></li>
+            <li><a href="/projet_php/flashMCqueen_loc/page_client.php" class="fa-solid fa-user-plus" style="color: #ff0000;"></a></li>
         </ul>
     </nav>
     <div class="container-sm">
@@ -43,18 +43,18 @@
                     
                                     if ($resultat) {
                                             while ($ligne = $resultat->fetch()) {
-                                                 echo '
+                                                 echo " 
                                                         <tr>
-                                                            <th scope="row">' . htmlspecialchars($ligne["id_client"]) . '</th>
-                                                            <td>' . htmlspecialchars($ligne["nom"]) . '</td>
-                                                            <td>' . htmlspecialchars($ligne["prenom"]) . '</td>
-                                                            <td>' . htmlspecialchars($ligne["adresse"]) . '</td>
-                                                            <td>' . htmlspecialchars($ligne["id_type_de_client"]) . '</td>
+                                                            <th scope='row'>$ligne[id_client] </th>
+                                                            <td>" . htmlspecialchars($ligne['nom']) . "</td>
+                                                            <td>" . htmlspecialchars($ligne['prenom']) . "</td>
+                                                            <td>" . htmlspecialchars($ligne['adresse']) . "</td>
+                                                            <td>" . htmlspecialchars($ligne['id_type_de_client']) . "</td>
                                                                 <td>
-                                                                    <a href="/" class="btn btn-primary btn-sm">Modifier</a>
-                                                                    <a href="/" class="btn btn-danger btn-sm">Supprimer</a>
+                                                                    <a class='btn btn-primary btn-sm' href='/projet_php/flashMCqueen_loc/modification_client.php?id=$ligne[id_client]' >Modifier</a>
+                                                                    <a class='btn btn-danger btn-sm' href='/projet_php/flashMCqueen_loc/supression_client.php?id=$ligne[id_client]'>Supprimer</a>
                                                                 </td>
-                                                        </tr>';
+                                                        </tr>";
                                                                                 }
                                                     }
                             } catch (PDOException $e) {
@@ -64,7 +64,7 @@
                 ?>
             </tbody>
         </table>
-            <button type="button" href='/' class="btn btn-primary">Nouveau client</button>
+            <a type="button" href='/projet_php/flashMCqueen_loc/insertion_client.php' class="btn btn-primary" role="button">Nouveau client</a>
     </div>
 </body>
 </html>
