@@ -16,7 +16,7 @@ body{
     position: sticky; /* si on déroule en bas la barre d'acceuil ne disparait pas */
     top: 0%;
     z-index: 999; /* pour toujours empiler la barre de menu en avant */
-    background-color: rgb(34, 139, 26);
+    background-color: rgb(65, 105, 225);
 }
 
 .navbar .logo .h1 {
