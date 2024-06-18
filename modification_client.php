@@ -11,7 +11,7 @@
     if ($_SERVER['REQUEST_METHOD'] == "GET") {
         // montrer les données des clients
         if( !isset($_GET["id"])) { // verifier si id est present sur l'url sinon retour à l'acceuil
-            header("");
+            header("location: /projet_php/flashMCqueen_loc/page_client.php");
             exit;
         }
         $id = $_GET["id"];
