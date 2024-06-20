@@ -34,6 +34,7 @@
                     $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                     $requete = 'SELECT 
+                                    v.id_voiture,
                                     m.libelle AS Marque, 
                                     mo.libelle AS Modele, 
                                     v.prix, 
@@ -57,7 +58,7 @@
                                         <div class="modele">' . htmlspecialchars($ligne["Modele"]) . '</div>
                                         <div class="contenu_2">
                                             <div class="prix">' . htmlspecialchars($ligne["prix"]) . ' euros par mois</div>
-                                            <button class="modification">modifier</button>
+                                             <a href="/projet_php/flashMCqueen_loc/modification_voiture.php?id=' . htmlspecialchars($ligne["id_voiture"]) . '" class="modification">Modifier</a>
                                         </div>
                                     </div>
                                 </div>';

@@ -109,7 +109,7 @@ try {
                 <button type="submit" class="btn btn-primary">Envoyer</button>
                 </div>
                 <div class="col-sm-3 d-grid">
-                <a  class="btn btn-outline-primary" href="#" role="button">Annuler</a>
+                <a  class="btn btn-outline-primary" href="/projet_php/flashMCqueen_loc//page_client.php" role="button">Annuler</a>
                 </div>
             </div>
         </form>

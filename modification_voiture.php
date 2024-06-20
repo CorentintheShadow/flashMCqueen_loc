@@ -1,9 +1,11 @@
 <?php
     $id = "";
-    $nom = "";
-    $prenom = "";
-    $adresse = "";
-    $type_de_client = "";
+    $immatriculation = "";
+    $compteur = "";
+    $prix = "";
+    $image = "";
+    $id_modele = "";
+    $id_peinture = "";
 
     $Message_erreur = "";
     $succes = "";
@@ -17,41 +19,45 @@
         $id = $_GET["id"];
         $connexion = new PDO('mysql:host=localhost;dbname=locauto_php', 'root','');
         $requete = "SELECT * 
-            from client 
-            where  id_client = $id";
+            from voiture 
+            where  id_voiture = $id";
         $resultat = $connexion->query($requete);
         $ligne = $resultat->fetch();
         // if (!$ligne){
         //     header("location: /projet_php/flashMCqueen_loc/page_client.php");
         //     exit;
         // }
-        $nom = $ligne["nom"]; // assigner leurs valeurs afin de les modifier 
-        $prenom = $ligne["prenom"];
-        $adresse = $ligne["adresse"];
-        $type_de_client = $ligne["id_type_de_client"];
+        $immatriculation = $ligne["immatriculation"]; // assigner leurs valeurs afin de les modifier 
+        $compteur = $ligne["compteur"];
+        $prix = $ligne["prix"];
+        $image = $ligne["image"];
+        $id_modele = $ligne["id_modele"];
+        $id_peinture = $ligne["id_peinture"];
     }
     else {
         // sinon on met à jour les données du client
         $id = $_POST["id"];
-        $nom = $_POST["nom"];
-        $prenom = $_POST["prenom"];
-        $adresse = $_POST["adresse"];
-        $type_de_client = $_POST["id_type_de_client"];
+        $immatriculation = $_POST["immatriculation"];
+        $compteur = $_POST["compteur"];
+        $prix = $_POST["prix"];
+        $image = $_POST["image"];
+        $id_modele = $_POST["id_modele"];
+        $id_peinture = $_POST["id_peinture"];
 
-        if ( empty($nom) || empty($prenom) || empty($adresse) || empty($type_de_client)) {
+        if ( empty($immatriculation) || empty($compteur) || empty($prix) || empty($image) || empty($id_modele) || empty($id_peinture)) {
             $Message_erreur = "veuillez saisir tous les champs";
             //die();
         }
         else try {
         $connexion = new PDO('mysql:host=localhost;dbname=locauto_php', 'root','');
 
-        $requete = "UPDATE client " .
-        "SET nom = '$nom',prenom = '$prenom',adresse = '$adresse',id_type_de_client = '$type_de_client' " .
+        $requete = "UPDATE voiture " .
+        "SET immatriculation = '$immatriculation',compteur = '$compteur',prix = '$prix',image = '$image',id_modele = '$id_modele',id_peinture = '$id_peinture'" .
         "WHERE id_client = $id";
 
         $resultat = $connexion->query($requete);
-        $succes = "Client mis à jour !!!";
-        header("location: /projet_php/flashMCqueen_loc/page_client.php");
+        $succes = "voiture mise à jour !!!";
+        header("location: /projet_php/flashMCqueen_loc/index.php");
         }
 
         catch (PDOException $e) {
@@ -74,7 +80,7 @@
 </head>
 <body>
     <div class= "container-sm">
-        <h2 class="text-center">Nouveau client</h2>
+        <h2 class="text-center">Modifier la voiture</h2>
         <?php
         if (!empty($Message_erreur)) {
             echo "
@@ -89,27 +95,39 @@
         <form method="post">
             <input type="hidden" name = "id"; value="<?php echo $id; ?>">
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Nom</label>
+                <label class="col-sm-3 col-form-label">immatriculation</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="nom" value="<?php echo $nom ?>">
+                    <input type="text" class="form-control" name="immatriculation" value="<?php echo $immatriculation ?>">
                 </div>
             </div>
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Prenom</label>
+                <label class="col-sm-3 col-form-label">compteur</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="prenom" value=" <?php echo $prenom ?>">
+                    <input type="text" class="form-control" name="compteur" value=" <?php echo $compteur ?>">
                 </div>
             </div>
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Adresse</label>
+                <label class="col-sm-3 col-form-label">prix</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="adresse" value="<?php echo $adresse ?>">
+                    <input type="text" class="form-control" name="prix" value="<?php echo $prix ?>">
                 </div>
             </div>
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Type de client</label>
+                <label class="col-sm-3 col-form-label">image</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="id_type_de_client" value="<?php echo $type_de_client ?>">
+                    <input type="text" class="form-control" name="image" value="<?php echo $image ?>">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">id_modele</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="id_modele" value="<?php echo $id_modele ?>">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">id_peinture</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="id_peinture" value="<?php echo $id_peinture ?>">
                 </div>
             </div>
             <?php
@@ -127,7 +145,7 @@
                 <button type="submit" class="btn btn-primary">Envoyer</button>
                 </div>
                 <div class="col-sm-3 d-grid">
-                <a  class="btn btn-outline-primary" href="/projet_php/flashMCqueen_loc//page_client.php" role="button">Annuler</a>
+                <a  class="btn btn-outline-primary" href="/projet_php/flashMCqueen_loc//index.php" role="button">Annuler</a>
                 </div>
             </div>
         </form>

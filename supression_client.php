@@ -4,7 +4,7 @@
         try {
         $connexion = new PDO('mysql:host=localhost;dbname=locauto_php', 'root','');
 
-        $requete = "DELETE FROM client WHERE id_client = $id";
+        $requete = "DELETE FROM client WHERE id_client = ".$id."";
 
         $resultat = $connexion->query($requete);
         $ligne = $resultat->fetch();
@@ -14,6 +14,6 @@
         }
     }
 
-header("location :/projet_php/flashMCqueen_loc/page_client.php"); //fonction qui redirige vers un chemin
-exit;
+    header("location: /projet_php/flashMCqueen_loc/page_client.php"); //fonction qui redirige vers un chemin
+    exit;
 ?>
