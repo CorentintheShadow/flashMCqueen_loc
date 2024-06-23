@@ -135,7 +135,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <button type="submit" class="btn btn-primary">Envoyer</button>
                 </div>
                 <div class="col-sm-3 d-grid">
-                    <a class="btn btn-outline-primary" href="/projet_php/flashMCqueen_loc/page_location.php" role="button">Annuler</a>
+                    <a class="btn btn-outline-primary" href="/projet_php/flashMCqueen_loc/index.php" role="button">Annuler</a>
                 </div>
             </div>
         </form>

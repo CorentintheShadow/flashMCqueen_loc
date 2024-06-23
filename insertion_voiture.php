@@ -1,5 +1,5 @@
 <?php
-$prix = "",
+$prix = "";
 $marque = "";
 $modele = "";
 $annee = "";
@@ -31,7 +31,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) { // verifier si la requete est de t
         }
 
         // Réinitialiser les champs après avoir ajouté la nouvelle voiture
-        $prix = "",
+        $prix = "";
         $marque = "";
         $modele = "";
         $annee = "";
@@ -112,7 +112,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) { // verifier si la requete est de t
                     <button type="submit" class="btn btn-primary">Envoyer</button>
                 </div>
                 <div class="col-sm-3 d-grid">
-                    <a class="btn btn-outline-primary" href="/projet_php/flashMCqueen_loc/page_voiture.php" role="button">Annuler</a>
+                    <a class="btn btn-outline-primary" href="/projet_php/flashMCqueen_loc/index.php" role="button">Annuler</a>
                 </div>
             </div>
         </form>
